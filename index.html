@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <!-- head
+
+        Purpose:
+        - Title used here shows up in the browser tab
+        - Link to the favicon (small image that appears in the browser tab)
+        - Link to the CSS file (used to style the webpage)
+
+        When To Modify:
+        - [ ] Project 2 (REQUIRED FEATURE) 
+        - [ ] Project 2 (STRETCH FEATURE) (favicon)
+        - [ ] Any time after
+        -->
+        <title>Ana's Graduation Party</title>
+        <link rel="icon" href="/img/favicon.png">
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    
+    <body>
+    
+        <!-- navbar
+
+        Purpose:
+        - Navigation bar that allows users to jump to different sections of the webpage
+        - Also holds buttons for user settings (dark mode, reduce motion)
+
+        When To Modify:
+        - [ ] Project 4 (REQUIRED FEATURE)
+        - [ ] Project 5 (REQUIRED FEATURE) 
+        - [ ] Project 8 (STRETCH FEATURE) 
+        - [ ] Any time between / after
+        -->
+        <div class="navbar">
+            <ul>
+            <li><a href="https://www.cis.fiu.edu/">FIU KFSCIS</a></li>
+            <li><a href="https://www.thecapitalgrille.com/home">Restaurant</a></li>
+            <li><a href="#rsvp">RSVP</a></li>
+            <li><button id="theme-button">Toggle Dark Mode</button></li>
+            </ul>
+        </div>
+
+        <!-- headings
+
+        Purpose:
+        - Main header section of the webpage
+        - Contains the title, subtitle, image, and key buttons for the webpage
+
+        When To Modify:
+        - [ ] Project 2 (REQUIRED FEATURE) 
+        - [ ] Project 3 (REQUIRED FEATURE) 
+        - [ ] Project 4 (REQUIRED FEATURE) 
+        - [ ] Any time after
+        -->
+        <div class="header-container">
+            <div class="header-item">
+                <img id="header-img" src="/img/favicon.png"/>
+            </div>
+            <div class="header-item">
+                <h1>Ana's Graduation Party</h1>
+                <h2>Join me in celebrating this milestone!</h2>
+                <button type="button" onclick="location.href='#rsvp'">RSVP Here!</button>
+                <button type="button">Leave a message</button>
+            </div>
+        </div>
+        
+        <!-- about
+
+        Purpose:
+        - Section for general info about the event
+        - Contains a video, description, and key points about the event
+
+        When To Modify:
+        - [ ] Project 2 (REQUIRED FEATURE) 
+        - [ ] Project 2 (STRETCH FEATURE) 
+        - [ ] Project 4 (STRETCH FEATURE) 
+        - [ ] Any time between / after
+        --> 
+        <h2>About the Event</h2>
+        <p>I have graduated from FIU with a B.S. in Computer Science. Come celebrate!</p>
+        <p>Here you can find useful links to RSVP, leave a message, view my photo album, and read my personal story and thank you mesage.</p>
+
+        <h3>Join me in celebrating this milestone!</h3>
+        <h4>Tag Line</h4>
+        <ul>
+            <li> <b>Bullet 1:</b> <i>Description</i></li>
+            <li> <b>Bullet 2:</b> <i>Description</i></li>
+            <li> <b>Bullet 3:</b> <i>Description</i></li>
+        </ul>
+
+        <!-- schedule
+
+        Purpose:
+        - Section for specific info about the event's schedule
+        - Contains images and descriptions of each activity
+
+        When To Modify:
+        - [ ] Project 2 (REQUIRED FEATURE) 
+        - [ ] Project 4 (STRETCH FEATURE) 
+        - [ ] Any time between / after
+        --> 
+        <h2>Event Schedule</h2>
+
+        <img alt="FIU Image" src="img/133951-florida-international-university.jpg" />
+        <h3>Check in (8-9 PM)</h3>
+        <p>Guests will check in and be seated at the table.</p>
+            
+        <img alt="Restaurant" src="img/TCG-8006-Miami-FL-Ext-574x250.jpg"/>
+        <h3>Catering</h3>
+        <p>Appetizers and entries will be served.</p>
+
+        <img alt="Location" src="/img/location.png"/>
+        <h3>Wrap up (10 PM)</h3>
+        <p>Up to 10 pm, desserts and drinks will be served.</p>
+
+        <!-- rsvp
+
+        Purpose:
+        - Section for users to sign up for the event
+        - Contains a form for users to input their information, 
+        and a list of other users who have signed up
+
+        When To Modify:
+        - [ ] Project 6 (REQUIRED FEATURE) 
+        - [ ] Project 6 (STRETCH FEATURE) 
+        - [ ] Any time after
+        --> 
+        <div id="rsvp">
+            <h2>RSVP</h2>
+            <div class="rsvp-container">
+                <div class="rsvp-para">
+                    <!-- info goes here -->
+                     <p>RSVP to the event! I will love to see you there.</p>
+                </div>
+                <div class="rsvp-participants">
+                    <p>🎟️ DJ from Texas has RSVP'd.</p>
+                    <p>🎟️ Amy from New York has RSVP'd.</p>
+                    <p>🎟️ Teresa from Montana has RSVP'd.</p>
+                </div>
+            </div>
+
+            <!--- Sign RSVP Form --->
+            <div class="form-container">
+                <form id="rsvp-form" title="rsvp-form">
+                    <label for="name">Name</label>
+                    <input type="text" id="name">
+                    <label for="location">State/Country</label>
+                    <input type="text" id="location">
+                    <label for="email">Email</label>
+                    <input type="text" id="email">
+                    <label for="number">Phone number</label>
+                    <input type="text" id="number">
+                </form>
+                <!-- Submit button -->
+                <button id="rsvp-button">Submit RSVP</button>
+            </div>      
+        </div>
+
+        <!-- success modal
+
+        Purpose:
+        - Modal that appears when a user successfully signs up for the event
+        - Contains a personalized message and image
+
+        When To Modify:
+        - [ ] Project 9 (REQUIRED FEATURE)
+        - [ ] Project 9 (STRETCH FEATURE) 
+        - [ ] Any time after
+        --> 
+
+        <div id="success-modal" class="modal">
+            <div class="modal-container">
+                <div id="modal-item">
+                    <p id="modal-text"></p>
+                </div>
+                <div id="modal-item">
+                    <img id="modal-image" src="img/ok_smile.webp"/>
+                </div>
+            </div>
+        </div>
+
+        <!-- links
+
+        Purpose:
+        - Links to other resources related to the event
+
+        When To Modify:
+        - [ ] Project 2 (STRETCH FEATURE) 
+        - [ ] Project 4 (STRETCH FEATURE) 
+        - [ ] Any time between / after
+        --> 
+        <h2>Links</h2>
+
+        <!-- This <a> block is one link.  Copy and paste all 6 lines to create another link. -->
+        <a class="block" href="https://www.codepath.org">
+            <article>
+                <h3>Link title</h3>
+                <p>Link description</p>
+            </article>
+        </a>
+            
+        <!-- footer [PLACEHOLDER] [ADDED IN UNIT 3] -->
+        <script src="index.js"></script>
+
+    </body>
+</html>
